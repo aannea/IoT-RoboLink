@@ -21,3 +21,15 @@ IoTRoboLink is a collection of my personal projects in the field of IoT and robo
 - The last_second variable is updated with the current second value to keep track of when the time changes. This helps prevent unnecessary updates to the LCD display when the time hasn't changed.
 - After updating the LCD, the LED connected to the led pin is turned on by setting it to HIGH using digitalWrite(). A delay of 1000 milliseconds (1 second) is added using delay() to keep the LED on for a second. Then, the LED is turned off by setting the led pin to LOW using digitalWrite().
 - The loop continues to repeat, updating the time, updating the LCD, and toggling the LED every second.
+
+### 002_PrintOled.ino
+- The code sets up and controls a 128x64 OLED display (specifically, an Adafruit SSD1306 display) using the Wire library.
+- In the setup() function, the display is initialized by calling display.begin(SSD1306_SWITCHCAPVCC, 0x3C). This sets up the communication with the display using the I2C protocol. The display is cleared using display.clearDisplay(). The text size is set to 1 with display.setTextSize(1), and the text color is set to white using display.setTextColor(SSD1306_WHITE). Additionally, the built-in LED pin is configured as an output using pinMode(LED_BUILTIN, OUTPUT).
+- The loop() function is where the main execution of the program occurs in a continuous loop.
+- In each iteration of the loop, the display is cleared using display.clearDisplay(). The built-in LED is turned on by setting the LED pin to HIGH using digitalWrite(LED_BUILTIN, HIGH), and there is a delay of 500 milliseconds.
+- The next lines of code set the cursor position on the display using display.setCursor(0, i), where i represents the vertical position of the text. The text "Aan Aryo Ganteng" is then printed on the display using display.println("Aan Aryo Ganteng").
+- After printing the text, the display is updated to show the changes by calling display.display().
+- The built-in LED is turned off by setting the LED pin to LOW using digitalWrite(LED_BUILTIN, LOW).
+- The code then checks if i is greater than 48. If so, it resets i to 0; otherwise, it increments i by 8. This controls the vertical position of the text on the display, allowing it to scroll vertically.
+- Finally, there is a delay of 500 milliseconds before the next iteration of the loop begins.
+- This loop continues, clearing the display, toggling the LED, printing the text, and scrolling the text vertically on the display.
