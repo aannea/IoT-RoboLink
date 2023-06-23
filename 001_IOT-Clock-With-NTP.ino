@@ -23,12 +23,12 @@ void setup() {
   pinMode(led,OUTPUT);
   lcd.init();
   lcd.backlight();
-    lcd.clear();
-    lcd.setCursor(3,0);
-    lcd.print("Aan Aryoo");
-    lcd.setCursor(6,1);
-    lcd.print("NEA");
-    delay(2000);
+  lcd.clear();
+  lcd.setCursor(3,0);
+  lcd.print("Aan Aryoo");
+  lcd.setCursor(6,1);
+  lcd.print("NEA");
+  delay(2000);
   
 
   WiFi.begin(ssid, pw);
