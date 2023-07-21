@@ -84,7 +84,7 @@ void loop() {
   }
 
   if (buka) {
-    servo.write(180);
+    servo.write(90);
     delay(2000);
   } else {
     servo.write(0);
