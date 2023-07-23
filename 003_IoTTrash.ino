@@ -94,5 +94,4 @@ void loop() {
   lcd.print(status);                     // Menampilkan status air pada LCD
   lcd.setCursor(0, 1);                   // Mengatur posisi kursor pada baris 2, kolom 1
   lcd.print(isFull);                     // Menampilkan status penuh/tidak penuh pada LCD
-  delay(1000);                           // Delay antar pembacaan sensor
 }
