@@ -4,9 +4,9 @@
 #include <CTBot.h>
 #include <ESP8266WiFi.h>
 
-const char* ssid = "Redmi"; 
-const char* password = "00000000"; 
-String telegramToken = "6503558712:AAHD6yn6ceBQzqtZ0p_49vS8WiZa6Pilci4";
+const char* ssid = ""; 
+const char* password = ""; 
+String telegramToken = "";
 int i = 0;
 const int I2C_ADDR = 0x27;
 const int LCD_COLUMNS = 16;
